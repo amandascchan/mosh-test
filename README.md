@@ -1,2 +1,0 @@
-# mosh-test
-mosh-test
