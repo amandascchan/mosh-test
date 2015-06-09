@@ -7,14 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E09FAFC1B252FB700500DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E09FAFB1B252FB700500DBB /* Main.storyboard */; };
+		2E09FAFD1B252FB700500DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E09FAFB1B252FB700500DBB /* Main.storyboard */; };
 		2E478D9F1B1BADF100424C66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E478D9E1B1BADF100424C66 /* main.m */; };
 		2E478DA21B1BADF100424C66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E478DA11B1BADF100424C66 /* AppDelegate.m */; };
-		2E478DA51B1BADF100424C66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E478DA41B1BADF100424C66 /* ViewController.m */; };
-		2E478DA81B1BADF100424C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E478DA61B1BADF100424C66 /* Main.storyboard */; };
+		2E478DA51B1BADF100424C66 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E478DA41B1BADF100424C66 /* ViewController.mm */; };
 		2E478DAA1B1BADF100424C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E478DA91B1BADF100424C66 /* Images.xcassets */; };
 		2E478DAD1B1BADF100424C66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E478DAB1B1BADF100424C66 /* LaunchScreen.xib */; };
 		2E478DB91B1BADF100424C66 /* test_for_lolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E478DB81B1BADF100424C66 /* test_for_lolsTests.m */; };
+		2E478DCE1B1D91BA00424C66 /* libmoshnetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E478DCD1B1D91BA00424C66 /* libmoshnetwork.a */; };
+		2E478DD21B1D926500424C66 /* libmoshstatesync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E478DD11B1D926500424C66 /* libmoshstatesync.a */; };
+		2EDF7E911B24F56F00690E14 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDF7E8B1B24F56F00690E14 /* libprotobuf-lite.a */; };
+		2EDF7E931B24F56F00690E14 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDF7E8D1B24F56F00690E14 /* libprotobuf.a */; };
+		2EDF7E951B24F56F00690E14 /* libprotoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDF7E8F1B24F56F00690E14 /* libprotoc.a */; };
+		2EDF7E981B24FA1E00690E14 /* libmoshprotos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDF7E971B24FA1E00690E14 /* libmoshprotos.a */; };
+		AA1D815C752B946672931747 /* libPods-test_for_lols.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D580E9986C6675FC752604C6 /* libPods-test_for_lols.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		2E478DD51B1ED93500424C66 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).pb.h",
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).pb.cc",
+			);
+			script = "cd ${INPUT_FILE_DIR}\n${SRCROOT}/build-protobuf/protobuf-2.6.0/bin/protoc --proto_path=${INPUT_FILE_DIR} ${INPUT_FILE_PATH} --cpp_out=${DERIVED_FILE_DIR}";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		2E478DB31B1BADF100424C66 /* PBXContainerItemProxy */ = {
@@ -27,29 +49,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		112FA5D7A7E947659795CE82 /* Pods-test_for_lols.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_for_lols.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test_for_lols/Pods-test_for_lols.debug.xcconfig"; sourceTree = "<group>"; };
+		2E09FAFB1B252FB700500DBB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2E478D991B1BADF100424C66 /* test_for_lols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_for_lols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E478D9D1B1BADF100424C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E478D9E1B1BADF100424C66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E478DA01B1BADF100424C66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E478DA11B1BADF100424C66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2E478DA31B1BADF100424C66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2E478DA41B1BADF100424C66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2E478DA71B1BADF100424C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E478DA41B1BADF100424C66 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		2E478DA91B1BADF100424C66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2E478DAC1B1BADF100424C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2E478DB21B1BADF100424C66 /* test_for_lolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test_for_lolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E478DB71B1BADF100424C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E478DB81B1BADF100424C66 /* test_for_lolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test_for_lolsTests.m; sourceTree = "<group>"; };
+		2E478DCD1B1D91BA00424C66 /* libmoshnetwork.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmoshnetwork.a; path = ../../mosh/src/network/libmoshnetwork.a; sourceTree = "<group>"; };
+		2E478DD11B1D926500424C66 /* libmoshstatesync.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmoshstatesync.a; path = ../../mosh/src/statesync/libmoshstatesync.a; sourceTree = "<group>"; };
+		2E478DD31B1ED74C00424C66 /* libprotobuf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprotobuf.dylib; path = usr/lib/libprotobuf.dylib; sourceTree = SDKROOT; };
+		2E478DD61B1EDD6500424C66 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = "../../build-protobuf/protobuf/lib/libprotobuf.a"; sourceTree = "<group>"; };
+		2E478DD81B1EDD7C00424C66 /* libprotobuf-lite.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libprotobuf-lite.la"; path = "../../build-protobuf/protobuf/lib/libprotobuf-lite.la"; sourceTree = "<group>"; };
+		2E478DDA1B1EDD9900424C66 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../../build-protobuf/protobuf/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
+		2E478DDB1B1EDD9900424C66 /* libprotobuf.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libprotobuf.la; path = "../../build-protobuf/protobuf/lib/libprotobuf.la"; sourceTree = "<group>"; };
+		2E478DDC1B1EDD9900424C66 /* libprotoc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotoc.a; path = "../../build-protobuf/protobuf/lib/libprotoc.a"; sourceTree = "<group>"; };
+		2E478DDD1B1EDD9900424C66 /* libprotoc.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libprotoc.la; path = "../../build-protobuf/protobuf/lib/libprotoc.la"; sourceTree = "<group>"; };
+		2E478DE21B1EDE5C00424C66 /* protobuf */ = {isa = PBXFileReference; lastKnownFileType = folder; name = protobuf; path = "../../build-protobuf/protobuf/include/google/protobuf"; sourceTree = "<group>"; };
+		2E478DE41B1EE52B00424C66 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "../../build-protobuf/protobuf-2.6.0/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
+		2E478DE51B1EE52B00424C66 /* libprotobuf-lite.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libprotobuf-lite.la"; path = "../../build-protobuf/protobuf-2.6.0/lib/libprotobuf-lite.la"; sourceTree = "<group>"; };
+		2E478DE61B1EE52B00424C66 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = "../../build-protobuf/protobuf-2.6.0/lib/libprotobuf.a"; sourceTree = "<group>"; };
+		2E478DE71B1EE52B00424C66 /* libprotobuf.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libprotobuf.la; path = "../../build-protobuf/protobuf-2.6.0/lib/libprotobuf.la"; sourceTree = "<group>"; };
+		2E478DE81B1EE52B00424C66 /* libprotoc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotoc.a; path = "../../build-protobuf/protobuf-2.6.0/lib/libprotoc.a"; sourceTree = "<group>"; };
+		2E478DE91B1EE52B00424C66 /* libprotoc.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libprotoc.la; path = "../../build-protobuf/protobuf-2.6.0/lib/libprotoc.la"; sourceTree = "<group>"; };
+		2EDF7E8B1B24F56F00690E14 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "build-protobuf/protobuf-2.6.0/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
+		2EDF7E8C1B24F56F00690E14 /* libprotobuf-lite.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libprotobuf-lite.la"; path = "build-protobuf/protobuf-2.6.0/lib/libprotobuf-lite.la"; sourceTree = "<group>"; };
+		2EDF7E8D1B24F56F00690E14 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = "build-protobuf/protobuf-2.6.0/lib/libprotobuf.a"; sourceTree = "<group>"; };
+		2EDF7E8E1B24F56F00690E14 /* libprotobuf.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libprotobuf.la; path = "build-protobuf/protobuf-2.6.0/lib/libprotobuf.la"; sourceTree = "<group>"; };
+		2EDF7E8F1B24F56F00690E14 /* libprotoc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotoc.a; path = "build-protobuf/protobuf-2.6.0/lib/libprotoc.a"; sourceTree = "<group>"; };
+		2EDF7E901B24F56F00690E14 /* libprotoc.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libprotoc.la; path = "build-protobuf/protobuf-2.6.0/lib/libprotoc.la"; sourceTree = "<group>"; };
+		2EDF7E971B24FA1E00690E14 /* libmoshprotos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmoshprotos.a; path = ../../mosh/src/protobufs/libmoshprotos.a; sourceTree = "<group>"; };
+		4C9C8B28AA0DEA7E7B96F442 /* Pods-test_for_lols.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_for_lols.release.xcconfig"; path = "Pods/Target Support Files/Pods-test_for_lols/Pods-test_for_lols.release.xcconfig"; sourceTree = "<group>"; };
+		D580E9986C6675FC752604C6 /* libPods-test_for_lols.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test_for_lols.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E478D961B1BADF100424C66 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2E478DAF1B1BADF100424C66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,15 +98,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E478DC41B1BF14300424C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EDF7E981B24FA1E00690E14 /* libmoshprotos.a in Frameworks */,
+				2EDF7E911B24F56F00690E14 /* libprotobuf-lite.a in Frameworks */,
+				2EDF7E931B24F56F00690E14 /* libprotobuf.a in Frameworks */,
+				2EDF7E951B24F56F00690E14 /* libprotoc.a in Frameworks */,
+				2E478DD21B1D926500424C66 /* libmoshstatesync.a in Frameworks */,
+				2E478DCE1B1D91BA00424C66 /* libmoshnetwork.a in Frameworks */,
+				AA1D815C752B946672931747 /* libPods-test_for_lols.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15C11A52E9EF5070B11003BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				112FA5D7A7E947659795CE82 /* Pods-test_for_lols.debug.xcconfig */,
+				4C9C8B28AA0DEA7E7B96F442 /* Pods-test_for_lols.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2E478D901B1BADF100424C66 = {
 			isa = PBXGroup;
 			children = (
+				2E478DD11B1D926500424C66 /* libmoshstatesync.a */,
+				2E478DCD1B1D91BA00424C66 /* libmoshnetwork.a */,
 				2E478D9B1B1BADF100424C66 /* test_for_lols */,
 				2E478DB51B1BADF100424C66 /* test_for_lolsTests */,
 				2E478D9A1B1BADF100424C66 /* Products */,
+				15C11A52E9EF5070B11003BA /* Pods */,
+				E0FB4BC3B233970B4873EADC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,9 +152,9 @@
 				2E478DA01B1BADF100424C66 /* AppDelegate.h */,
 				2E478DA11B1BADF100424C66 /* AppDelegate.m */,
 				2E478DA31B1BADF100424C66 /* ViewController.h */,
-				2E478DA41B1BADF100424C66 /* ViewController.m */,
-				2E478DA61B1BADF100424C66 /* Main.storyboard */,
+				2E478DA41B1BADF100424C66 /* ViewController.mm */,
 				2E478DA91B1BADF100424C66 /* Images.xcassets */,
+				2E09FAFB1B252FB700500DBB /* Main.storyboard */,
 				2E478DAB1B1BADF100424C66 /* LaunchScreen.xib */,
 				2E478D9C1B1BADF100424C66 /* Supporting Files */,
 			);
@@ -119,6 +187,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E0FB4BC3B233970B4873EADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EDF7E971B24FA1E00690E14 /* libmoshprotos.a */,
+				2EDF7E8B1B24F56F00690E14 /* libprotobuf-lite.a */,
+				2EDF7E8C1B24F56F00690E14 /* libprotobuf-lite.la */,
+				2EDF7E8D1B24F56F00690E14 /* libprotobuf.a */,
+				2EDF7E8E1B24F56F00690E14 /* libprotobuf.la */,
+				2EDF7E8F1B24F56F00690E14 /* libprotoc.a */,
+				2EDF7E901B24F56F00690E14 /* libprotoc.la */,
+				2E478DE41B1EE52B00424C66 /* libprotobuf-lite.a */,
+				2E478DE51B1EE52B00424C66 /* libprotobuf-lite.la */,
+				2E478DE61B1EE52B00424C66 /* libprotobuf.a */,
+				2E478DE71B1EE52B00424C66 /* libprotobuf.la */,
+				2E478DE81B1EE52B00424C66 /* libprotoc.a */,
+				2E478DE91B1EE52B00424C66 /* libprotoc.la */,
+				2E478DE21B1EDE5C00424C66 /* protobuf */,
+				2E478DDA1B1EDD9900424C66 /* libprotobuf-lite.a */,
+				2E478DDB1B1EDD9900424C66 /* libprotobuf.la */,
+				2E478DDC1B1EDD9900424C66 /* libprotoc.a */,
+				2E478DDD1B1EDD9900424C66 /* libprotoc.la */,
+				2E478DD81B1EDD7C00424C66 /* libprotobuf-lite.la */,
+				2E478DD61B1EDD6500424C66 /* libprotobuf.a */,
+				2E478DD31B1ED74C00424C66 /* libprotobuf.dylib */,
+				D580E9986C6675FC752604C6 /* libPods-test_for_lols.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,11 +223,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E478DBC1B1BADF100424C66 /* Build configuration list for PBXNativeTarget "test_for_lols" */;
 			buildPhases = (
+				25F5FADB0C59BC433C1174AE /* Check Pods Manifest.lock */,
 				2E478D951B1BADF100424C66 /* Sources */,
-				2E478D961B1BADF100424C66 /* Frameworks */,
 				2E478D971B1BADF100424C66 /* Resources */,
+				2E478DC41B1BF14300424C66 /* Frameworks */,
+				745D8F0D256DD21CA49AED5E /* Copy Pods Resources */,
 			);
 			buildRules = (
+				2E478DD51B1ED93500424C66 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -199,7 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E478DA81B1BADF100424C66 /* Main.storyboard in Resources */,
+				2E09FAFC1B252FB700500DBB /* Main.storyboard in Resources */,
 				2E478DAD1B1BADF100424C66 /* LaunchScreen.xib in Resources */,
 				2E478DAA1B1BADF100424C66 /* Images.xcassets in Resources */,
 			);
@@ -209,17 +309,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E09FAFD1B252FB700500DBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25F5FADB0C59BC433C1174AE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		745D8F0D256DD21CA49AED5E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test_for_lols/Pods-test_for_lols-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E478D951B1BADF100424C66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E478DA51B1BADF100424C66 /* ViewController.m in Sources */,
+				2E478DA51B1BADF100424C66 /* ViewController.mm in Sources */,
 				2E478DA21B1BADF100424C66 /* AppDelegate.m in Sources */,
 				2E478D9F1B1BADF100424C66 /* main.m in Sources */,
 			);
@@ -244,14 +378,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2E478DA61B1BADF100424C66 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E478DA71B1BADF100424C66 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2E478DAB1B1BADF100424C66 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -302,6 +428,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -339,6 +466,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -347,21 +475,74 @@
 		};
 		2E478DBD1B1BADF100424C66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 112FA5D7A7E947659795CE82 /* Pods-test_for_lols.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"<Multiple",
+					"values>",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = test_for_lols/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/amandachan/mosh/**",
+					/Users/amandachan/mosh/src/frontend,
+					/Users/amandachan/mosh/src/crypto,
+					/Users/amandachan/mosh/src/util,
+					/Users/amandachan/mosh/src/terminal,
+					/Users/amandachan/mosh/src/network,
+					/Users/amandachan/mosh/src/statesync,
+					"/Users/amandachan/build-protobuf/protobuf-2.6.0/lib",
+					"$(PROJECT_DIR)/build-protobuf/protobuf-2.6.0/lib",
+					"$(inherited)",
+				);
+				MACH_O_TYPE = mh_execute;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-L",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/amandachan/mosh/** /Users/amandachan/Desktop/test_for_lols/build-protobuf/protobuf-2.6.0/include/**";
 			};
 			name = Debug;
 		};
 		2E478DBE1B1BADF100424C66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9C8B28AA0DEA7E7B96F442 /* Pods-test_for_lols.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = test_for_lols/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/amandachan/mosh/**",
+					/Users/amandachan/mosh/src/frontend,
+					/Users/amandachan/mosh/src/crypto,
+					/Users/amandachan/mosh/src/util,
+					/Users/amandachan/mosh/src/terminal,
+					/Users/amandachan/mosh/src/network,
+					/Users/amandachan/mosh/src/statesync,
+					"/Users/amandachan/build-protobuf/protobuf-2.6.0/lib",
+					"$(PROJECT_DIR)/build-protobuf/protobuf-2.6.0/lib",
+					"$(inherited)",
+				);
+				MACH_O_TYPE = mh_execute;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-L",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/amandachan/mosh/** /Users/amandachan/Desktop/test_for_lols/build-protobuf/protobuf-2.6.0/include/**";
 			};
 			name = Release;
 		};
@@ -370,6 +551,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
@@ -389,7 +575,8 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
+					"<Multiple",
+					"values>",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = test_for_lolsTests/Info.plist;
@@ -418,6 +605,7 @@
 				2E478DBE1B1BADF100424C66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E478DBF1B1BADF100424C66 /* Build configuration list for PBXNativeTarget "test_for_lolsTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +614,7 @@
 				2E478DC11B1BADF100424C66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
